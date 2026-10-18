@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N Kay Beauty Salon | Premium Ladies Sanctuary Al Ain</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        nkay: {
+                            wine: '#4A1525',       /* Muted Burgundy / Deep Wine */
+                            wineDark: '#2D0B16',   /* Dark Velvet Burgundy */
+                            rose: '#D8B4B4',       /* Soft Rose Nude */
+                            roseLight: '#F3E8E8',  /* Very Light Rose Tint */
+                            cream: '#FAF6F0',      /* Warm Velvet Cream Background */
+                            gold: '#D4AF37',       /* Warm Champagne Gold */
+                            goldHover: '#B39126',  /* Gold Hover */
+                            slate: '#1A1A1A',      /* Soft Charcoal / Slate */
+                            muted: '#6B5E62',      /* Warm Muted Text */
+                            border: '#E8DDD5'      /* Soft Cream Border */
+                        }
+                    },
+                    fontFamily: {
+                        cinzel: ['Cinzel', 'serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FAF6F0;
+            color: #1A1A1A;
+        }
+
+        .font-cinzel-heading {
+            font-family: 'Cinzel', serif;
+        }
+
+        .font-serif-heading {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Human Crafted Custom Cards */
+        .nkay-card {
+            background: #FFFFFF;
+            border: 1px solid #E8DDD5;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .nkay-card:hover {
+            border-color: #D8B4B4;
+            box-shadow: 0 12px 28px -8px rgba(74, 21, 37, 0.08);
+            transform: translateY(-2px);
+        }
+
+        /* Custom Elegant Buttons */
+        .btn-wine {
+            background-color: #4A1525;
+            color: #FFFFFF;
+            transition: all 0.2s ease;
+        }
+        .btn-wine:hover {
+            background-color: #2D0B16;
+            box-shadow: 0 6px 18px -4px rgba(74, 21, 37, 0.3);
+        }
+
+        .btn-gold {
+            background-color: #D4AF37;
+            color: #FFFFFF;
+            transition: all 0.2s ease;
+        }
+        .btn-gold:hover {
+            background-color: #B39126;
+            box-shadow: 0 6px 18px -4px rgba(212, 175, 55, 0.3);
+        }
+
+        .btn-outline-wine {
+            border: 1px solid #4A1525;
+            color: #4A1525;
+            background-color: transparent;
+            transition: all 0.2s ease;
+        }
+        .btn-outline-wine:hover {
+            background-color: #4A1525;
+            color: #FFFFFF;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #FAF6F0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D8B4B4;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #4A1525;
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-nkay-rose/30 selection:text-nkay-wine">
+
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="bg-nkay-wine text-nkay-roseLight text-xs py-2.5 px-4 border-b border-nkay-gold/20">
+        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
+            <div class="flex items-center gap-3 font-medium">
+                <span><i class="fa-solid fa-location-dot text-nkay-gold mr-1.5"></i> Al Jimi Area, Al Ain, Abu Dhabi, UAE</span>
+                <span class="hidden md:inline text-nkay-rose/40">•</span>
+                <span class="hidden md:inline"><i class="fa-solid fa-clock text-nkay-gold mr-1.5"></i> Daily: 10:00 AM – 10:00 PM (100% Private Ladies Sanctuary)</span>
+            </div>
+            <div class="flex items-center gap-4 font-semibold">
+                <a href="tel:+97137660000" class="hover:text-nkay-gold transition-colors flex items-center gap-1.5">
+                    <i class="fa-solid fa-phone text-nkay-gold text-[11px]"></i>
+                    <span>+971 3 766 0000</span>
+                </a>
+                <a href="https://wa.me/971500000000" target="_blank" class="bg-emerald-700 hover:bg-emerald-800 text-white px-2.5 py-1 rounded text-[11px] transition-colors flex items-center gap-1.5 font-medium">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp Salon
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-nkay-border transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+            
+            <!-- Logo Badge -->
+            <a href="#" class="flex items-center gap-3">
+                <div class="w-11 h-11 rounded-lg bg-nkay-wine text-nkay-gold flex items-center justify-center border border-nkay-gold/40 shadow-xs">
+                    <span class="font-cinzel-heading font-bold text-xl tracking-wider">NK</span>
+                </div>
+                <div>
+                    <div class="flex items-baseline gap-2">
+                        <span class="font-cinzel-heading font-bold text-xl tracking-wider text-nkay-wine uppercase">
+                            N KAY
+                        </span>
+                        <span class="text-[10px] bg-nkay-roseLight text-nkay-wine px-1.5 py-0.5 rounded font-bold uppercase tracking-wider">
+                            BEAUTY SALON
+                        </span>
+                    </div>
+                    <span class="text-[10px] font-medium tracking-widest text-nkay-muted block leading-none mt-0.5 uppercase">
+                        AL AIN • UAE • SALON & SPA
+                    </span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden lg:flex items-center gap-8 text-xs font-semibold uppercase tracking-wider text-nkay-slate">
+                <a href="#about" class="hover:text-nkay-wine transition-colors">Our Sanctuary</a>
+                <a href="#treatments" class="hover:text-nkay-wine transition-colors">Services & Menu</a>
+                <a href="#packages" class="hover:text-nkay-wine transition-colors">Signature Packages</a>
+                <a href="#reviews" class="hover:text-nkay-wine transition-colors">Client Reviews</a>
+                <a href="#contact" class="hover:text-nkay-wine transition-colors">Location & Contact</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="hidden sm:flex items-center gap-3">
+                <a href="#booking" class="btn-wine px-5 py-2.5 rounded-md font-bold text-xs uppercase tracking-wider flex items-center gap-2 shadow-xs">
+                    <i class="fa-regular fa-calendar-check text-nkay-gold"></i>
+                    <span>Book Appointment</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-menu-toggle" aria-label="Toggle Navigation Menu" class="lg:hidden p-2 rounded-md text-nkay-wine hover:bg-nkay-roseLight border border-nkay-border">
+                <i class="fa-solid fa-bars text-lg"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-b border-nkay-border px-6 py-5 space-y-4 shadow-lg">
+            <a href="#about" class="block text-xs font-bold text-nkay-slate uppercase tracking-wider">Our Sanctuary</a>
+            <a href="#treatments" class="block text-xs font-bold text-nkay-slate uppercase tracking-wider">Services & Menu</a>
+            <a href="#packages" class="block text-xs font-bold text-nkay-slate uppercase tracking-wider">Signature Packages</a>
+            <a href="#reviews" class="block text-xs font-bold text-nkay-slate uppercase tracking-wider">Client Reviews</a>
+            <a href="#contact" class="block text-xs font-bold text-nkay-slate uppercase tracking-wider">Location & Contact</a>
+            <div class="pt-2 border-t border-nkay-border">
+                <a href="#booking" class="block text-center w-full py-3 rounded-md btn-wine font-bold text-xs uppercase tracking-wider">
+                    Book Appointment
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: HERO SECTION -->
+    <section class="relative py-16 lg:py-24 bg-nkay-cream border-b border-nkay-border overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Hero Text Content -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-nkay-roseLight border border-nkay-rose/40 text-nkay-wine text-xs font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-nkay-gold"></span>
+                    <span>Exclusive Ladies Sanctuary • Al Jimi, Al Ain</span>
+                </div>
+
+                <h1 class="font-serif-heading text-4xl sm:text-5xl lg:text-6xl font-normal text-nkay-wine tracking-tight leading-[1.15]">
+                    Refined Elegance, <br>
+                    <span class="italic text-nkay-gold font-normal">Bespoke Beauty Care</span>
+                </h1>
+
+                <p class="text-sm sm:text-base text-nkay-muted max-w-xl leading-relaxed font-normal">
+                    Step into N Kay Beauty Salon in Al Ain. Experience top-tier hair couture, organic keratin rituals, velvet manicures, hydra-glow facials, and lash architecture in a completely private environment.
+                </p>
+
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap items-center gap-4 pt-2">
+                    <a href="#booking" class="btn-wine px-7 py-3.5 rounded-md font-bold text-xs uppercase tracking-wider flex items-center gap-2">
+                        <i class="fa-regular fa-calendar-check text-nkay-gold"></i>
+                        <span>Schedule Your Visit</span>
+                    </a>
+                    <a href="https://wa.me/971500000000" target="_blank" class="px-6 py-3.5 rounded-md bg-white border border-nkay-border text-nkay-wine font-bold text-xs uppercase tracking-wider hover:bg-nkay-roseLight transition-colors flex items-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-emerald-600"></i>
+                        <span>WhatsApp Quick Book</span>
+                    </a>
+                </div>
+
+                <!-- Credential Metrics Bar -->
+                <div class="pt-8 grid grid-cols-3 gap-4 border-t border-nkay-border">
+                    <div>
+                        <span class="block font-cinzel-heading text-2xl sm:text-3xl font-bold text-nkay-wine">4.9 ★</span>
+                        <span class="text-[11px] text-nkay-muted font-bold uppercase tracking-wider">Google Review Rating</span>
+                    </div>
+                    <div>
+                        <span class="block font-cinzel-heading text-2xl sm:text-3xl font-bold text-nkay-wine">100%</span>
+                        <span class="text-[11px] text-nkay-muted font-bold uppercase tracking-wider">Ladies Privacy Guaranteed</span>
+                    </div>
+                    <div>
+                        <span class="block font-cinzel-heading text-2xl sm:text-3xl font-bold text-nkay-wine">10+ Yrs</span>
+                        <span class="text-[11px] text-nkay-muted font-bold uppercase tracking-wider">Master Stylists</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Image Frame Showcase -->
+            <div class="lg:col-span-5">
+                <div class="bg-white p-4 rounded-2xl border border-nkay-border shadow-sm space-y-4">
+                    
+                    <div class="relative h-80 sm:h-96 rounded-xl overflow-hidden bg-nkay-roseLight border border-nkay-border">
+                        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=800" alt="N Kay Beauty Salon Al Ain Interior" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/800x900/F3E8E8/4A1525?text=N+Kay+Beauty+Salon+Al+Ain';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-nkay-wine/90 via-nkay-wine/20 to-transparent flex items-end p-6">
+                            <div class="text-white space-y-1">
+                                <span class="bg-nkay-gold text-white text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded">Al Jimi • Al Ain</span>
+                                <h3 class="text-lg font-serif-heading">Serene Luxury Salon Suite</h3>
+                                <p class="text-xs text-nkay-roseLight">Designed for pure relaxation and pampering.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Clinical Highlights -->
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="p-3 rounded-lg bg-nkay-cream border border-nkay-border flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-md bg-white text-nkay-gold flex items-center justify-center shrink-0 border border-nkay-gold/30">
+                                <i class="fa-solid fa-pump-soap text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-nkay-wine">Premium Products</h4>
+                                <span class="text-[10px] text-nkay-muted">Organic & Safe Formulas</span>
+                            </div>
+                        </div>
+
+                        <div class="p-3 rounded-lg bg-nkay-cream border border-nkay-border flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-md bg-white text-nkay-gold flex items-center justify-center shrink-0 border border-nkay-gold/30">
+                                <i class="fa-solid fa-user-check text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-nkay-wine">Senior Specialists</h4>
+                                <span class="text-[10px] text-nkay-muted">Certified Beauty Team</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 2: SANCTUARY & ABOUT US -->
+    <section id="about" class="py-16 bg-white border-b border-nkay-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Clinical Images Showcase -->
+                <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <div class="h-48 rounded-xl overflow-hidden border border-nkay-border">
+                            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&q=80&w=500" alt="Hair Treatment Al Ain" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x500/D8B4B4/FFFFFF?text=Hair+Couture';">
+                        </div>
+                        <div class="p-4 rounded-xl bg-nkay-roseLight border border-nkay-rose/40 text-center space-y-1">
+                            <i class="fa-solid fa-gem text-nkay-wine text-xl"></i>
+                            <h4 class="text-xs font-bold text-nkay-wine">Private VIP Suites</h4>
+                            <p class="text-[10px] text-nkay-muted">For brides and private sessions</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4 pt-6">
+                        <div class="p-4 rounded-xl bg-nkay-cream border border-nkay-border text-center space-y-1">
+                            <i class="fa-solid fa-hand-sparkles text-nkay-gold text-xl"></i>
+                            <h4 class="text-xs font-bold text-nkay-wine">Hospital Grade Hygiene</h4>
+                            <p class="text-[10px] text-nkay-muted">Single-use tools & autoclave care</p>
+                        </div>
+                        <div class="h-48 rounded-xl overflow-hidden border border-nkay-border">
+                            <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&q=80&w=500" alt="Nail Art Al Ain" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/400x500/4A1525/FFFFFF?text=Luxury+Nails';">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Philosophy Narrative -->
+                <div class="lg:col-span-7 space-y-6">
+                    <span class="text-nkay-gold text-xs font-bold uppercase tracking-widest bg-nkay-cream px-3.5 py-1.5 rounded border border-nkay-gold/30 inline-block">
+                        The N Kay Experience
+                    </span>
+
+                    <h2 class="font-serif-heading text-3xl sm:text-4xl font-normal text-nkay-wine leading-tight">
+                        A Sanctuary Built around <br>
+                        <span class="italic text-nkay-gold font-normal">Comfort, Privacy & Beauty</span>
+                    </h2>
+
+                    <p class="text-xs sm:text-sm text-nkay-muted leading-relaxed font-normal">
+                        Located in the quiet, accessible Al Jimi / Central district of Al Ain, **N Kay Beauty Salon** was designed with one vision: to offer ladies in Al Ain a serene, luxurious space where beauty care is elevated into a restorative ritual.
+                    </p>
+
+                    <div class="space-y-3.5 pt-2">
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded bg-nkay-roseLight text-nkay-wine flex items-center justify-center text-xs shrink-0 mt-0.5 border border-nkay-rose/40">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-nkay-wine">Tailored Hair & Scalp Therapy</h4>
+                                <p class="text-[11px] text-nkay-muted">Protein, keratin, caviar deep conditioning, and custom hair coloring.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded bg-nkay-roseLight text-nkay-wine flex items-center justify-center text-xs shrink-0 mt-0.5 border border-nkay-rose/40">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-nkay-wine">Nail Couture & Spa Pedicures</h4>
+                                <p class="text-[11px] text-nkay-muted">Russian manicure techniques, long-lasting gelish, and soothing paraffin masks.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-6 h-6 rounded bg-nkay-roseLight text-nkay-wine flex items-center justify-center text-xs shrink-0 mt-0.5 border border-nkay-rose/40">
+                                <i class="fa-solid fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xs font-bold text-nkay-wine">Hydra-Facials & Skin Rejuvenation</h4>
+                                <p class="text-[11px] text-nkay-muted">Deep pore cleansing, collagen masks, and instant glow treatments.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-nkay-border flex items-center gap-6">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-shield-heart text-nkay-gold text-lg"></i>
+                            <span class="text-xs font-bold text-nkay-wine">Strict 100% Ladies Privacy</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-star text-nkay-gold text-lg"></i>
+                            <span class="text-xs font-bold text-nkay-wine">Top Rated in Al Ain</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: INTERACTIVE TREATMENT MENU -->
+    <section id="treatments" class="py-16 bg-nkay-cream border-b border-nkay-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-10 space-y-3">
+                <span class="text-nkay-gold text-xs font-bold uppercase tracking-widest bg-white px-3.5 py-1.5 rounded border border-nkay-gold/30 inline-block">
+                    Treatment Collection
+                </span>
+                <h2 class="font-serif-heading text-3xl sm:text-4xl font-normal text-nkay-wine">Our Service Menu</h2>
+                <p class="text-nkay-muted text-xs sm:text-sm font-normal">Explore our curated range of hair, nail, facial, and lash services in Al Ain.</p>
+            </div>
+
+            <!-- Department Category Filters -->
+            <div class="flex flex-wrap justify-center gap-2 mb-10">
+                <button onclick="filterCategory('all')" id="tab-all" class="cat-btn px-4 py-2 rounded text-xs font-bold uppercase tracking-wider bg-nkay-wine text-white">
+                    All Treatments
+                </button>
+                <button onclick="filterCategory('hair')" id="tab-hair" class="cat-btn px-4 py-2 rounded text-xs font-bold uppercase tracking-wider bg-white text-nkay-wine border border-nkay-border hover:border-nkay-rose">
+                    Hair & Keratin
+                </button>
+                <button onclick="filterCategory('nails')" id="tab-nails" class="cat-btn px-4 py-2 rounded text-xs font-bold uppercase tracking-wider bg-white text-nkay-wine border border-nkay-border hover:border-nkay-rose">
+                    Nails & Hands
+                </button>
+                <button onclick="filterCategory('facials')" id="tab-facials" class="cat-btn px-4 py-2 rounded text-xs font-bold uppercase tracking-wider bg-white text-nkay-wine border border-nkay-border hover:border-nkay-rose">
+                    Facials & Glow
+                </button>
+                <button onclick="filterCategory('lashes')" id="tab-lashes" class="cat-btn px-4 py-2 rounded text-xs font-bold uppercase tracking-wider bg-white text-nkay-wine border border-nkay-border hover:border-nkay-rose">
+                    Lashes & Waxing
+                </button>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="services-grid">
+                
+                <!-- Hair 1 -->
+                <div class="cat-item nkay-card p-6 rounded-xl flex flex-col justify-between" data-cat="hair">
+                    <div class="space-y-3">
+                        <div class="w-10 h-10 rounded bg-nkay-roseLight text-nkay-wine flex items-center justify-center text-lg border border-nkay-rose/30">
+                            <i class="fa-solid fa-scissors"></i>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-base font-bold text-nkay-wine">Organic Keratin & Caviar Treatment</h3>
+                            <span class="text-xs font-bold text-nkay-gold bg-nkay-cream px-2 py-1 rounded border border-nkay-gold/30">AED 350+</span>
+                        </div>
+                        <p class="text-xs text-nkay-muted leading-relaxed">
+                            Formaldehyde-free protein smoothing that tames frizz, locks in shine, and restores dry damaged hair fibers.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-nkay-border flex items-center justify-between text-xs font-bold">
+                        <span class="text-nkay-muted"><i class="fa-regular fa-clock mr-1"></i> 90-120 Mins</span>
+                        <a href="#booking" class="text-nkay-wine hover:text-nkay-gold uppercase">Book <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Hair 2 -->
+                <div class="cat-item nkay-card p-6 rounded-xl flex flex-col justify-between" data-cat="hair">
+                    <div class="space-y-3">
+                        <div class="w-10 h-10 rounded bg-nkay-roseLight text-nkay-wine flex items-center justify-center text-lg border border-nkay-rose/30">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-base font-bold text-nkay-wine">Custom Balayage & Root Touchup</h3>
+                            <span class="text-xs font-bold text-nkay-gold bg-nkay-cream px-2 py-1 rounded border border-nkay-gold/30">AED 280+</span>
+                        </div>
+                        <p class="text-xs text-nkay-muted leading-relaxed">
+                            Ammonia-free high quality hair coloring that blends tones smoothly, protecting your natural hair density.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-nkay-border flex items-center justify-between text-xs font-bold">
+                        <span class="text-nkay-muted"><i class="fa-regular fa-clock mr-1"></i> 120 Mins</span>
+                        <a href="#booking" class="text-nkay-wine hover:text-nkay-gold uppercase">Book <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Nails 1 -->
+                <div class="cat-item nkay-card p-6 rounded-xl flex flex-col justify-between" data-cat="nails">
+                    <div class="space-y-3">
+                        <div class="w-10 h-10 rounded bg-nkay-roseLight text-nkay-wine flex items-center justify-center text-lg border border-nkay-rose/30">
+                            <i class="fa-solid fa-hand-sparkles"></i>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-base font-bold text-nkay-wine">Russian Gelish Manicure & Pedicure</h3>
+                            <span class="text-xs font-bold text-nkay-gold bg-nkay-cream px-2 py-1 rounded border border-nkay-gold/30">AED 180</span>
+                        </div>
+                        <p class="text-xs text-nkay-muted leading-relaxed">
+                            Precision cuticle work with long-lasting premium gel polish that stays chip-free for up to 3 weeks.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-nkay-border flex items-center justify-between text-xs font-bold">
+                        <span class="text-nkay-muted"><i class="fa-regular fa-clock mr-1"></i> 60 Mins</span>
+                        <a href="#booking" class="text-nkay-wine hover:text-nkay-gold uppercase">Book <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Nails 2 -->
+                <div class="cat-item nkay-card p-6 rounded-xl flex flex-col justify-between" data-cat="nails">
+                    <div class="space-y-3">
+                        <div class="w-10 h-10 rounded bg-nkay-roseLight text-nkay-wine flex items-center justify-center text-lg border border-nkay-rose/30">
+                            <i class="fa-solid fa-gem"></i>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-base font-bold text-nkay-wine">Spa Spa Pedicure + Warm Paraffin</h3>
+                            <span class="text-xs font-bold text-nkay-gold bg-nkay-cream px-2 py-1 rounded border border-nkay-gold/30">AED 150</span>
+                        </div>
+                        <p class="text-xs text-nkay-muted leading-relaxed">
+                            Deep exfoliating foot scrub, relaxing lower leg massage, and hydrating warm wax paraffin bootie.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-nkay-border flex items-center justify-between text-xs font-bold">
+                        <span class="text-nkay-muted"><i class="fa-regular fa-clock mr-1"></i> 50 Mins</span>
+                        <a href="#booking" class="text-nkay-wine hover:text-nkay-gold uppercase">Book <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Facials 1 -->
+                <div class="cat-item nkay-card p-6 rounded-xl flex flex-col justify-between" data-cat="facials">
+                    <div class="space-y-3">
+                        <div class="w-10 h-10 rounded bg-nkay-roseLight text-nkay-wine flex items-center justify-center text-lg border border-nkay-rose/30">
+                            <i class="fa-solid fa-droplet"></i>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-base font-bold text-nkay-wine">N Kay Signature Hydra-Facial</h3>
+                            <span class="text-xs font-bold text-nkay-gold bg-nkay-cream px-2 py-1 rounded border border-nkay-gold/30">AED 290</span>
+                        </div>
+                        <p class="text-xs text-nkay-muted leading-relaxed">
+                            Multi-step vortex deep cleansing, gentle pore extraction, hyaluronic acid infusion, and LED light glow.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-nkay-border flex items-center justify-between text-xs font-bold">
+                        <span class="text-nkay-muted"><i class="fa-regular fa-clock mr-1"></i> 60 Mins</span>
+                        <a href="#booking" class="text-nkay-wine hover:text-nkay-gold uppercase">Book <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+                <!-- Lashes 1 -->
+                <div class="cat-item nkay-card p-6 rounded-xl flex flex-col justify-between" data-cat="lashes">
+                    <div class="space-y-3">
+                        <div class="w-10 h-10 rounded bg-nkay-roseLight text-nkay-wine flex items-center justify-center text-lg border border-nkay-rose/30">
+                            <i class="fa-solid fa-eye"></i>
+                        </div>
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-base font-bold text-nkay-wine">Lash Lift & Brow Lamination</h3>
+                            <span class="text-xs font-bold text-nkay-gold bg-nkay-cream px-2 py-1 rounded border border-nkay-gold/30">AED 200</span>
+                        </div>
+                        <p class="text-xs text-nkay-muted leading-relaxed">
+                            Keratin-infused lash lift and brow shaping that creates full, structured, natural-looking arches and curled lashes.
+                        </p>
+                    </div>
+                    <div class="pt-4 mt-4 border-t border-nkay-border flex items-center justify-between text-xs font-bold">
+                        <span class="text-nkay-muted"><i class="fa-regular fa-clock mr-1"></i> 45 Mins</span>
+                        <a href="#booking" class="text-nkay-wine hover:text-nkay-gold uppercase">Book <i class="fa-solid fa-arrow-right ml-1"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: SIGNATURE PACKAGES & VIP LOUNGE -->
+    <section id="packages" class="py-16 bg-white border-b border-nkay-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+                <span class="text-nkay-gold text-xs font-bold uppercase tracking-widest bg-nkay-cream px-3.5 py-1.5 rounded border border-nkay-gold/30 inline-block">
+                    Curated Pampering
+                </span>
+                <h2 class="font-serif-heading text-3xl sm:text-4xl font-normal text-nkay-wine">Signature Beauty Packages</h2>
+                <p class="text-nkay-muted text-xs sm:text-sm font-normal">Bundled sessions crafted for total rejuvenation and special occasions in Al Ain.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                
+                <!-- Package 1 -->
+                <div class="nkay-card rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden border-2 border-nkay-border">
+                    <div class="space-y-4">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-nkay-wine bg-nkay-roseLight px-3 py-1 rounded">Popular Combo</span>
+                        <h3 class="font-serif-heading text-2xl text-nkay-wine">Weekend Pamper Glow</h3>
+                        <div class="text-3xl font-cinzel-heading font-bold text-nkay-wine">
+                            AED 390 <span class="text-xs text-nkay-muted font-normal">/ session</span>
+                        </div>
+                        <ul class="space-y-2.5 text-xs text-nkay-slate pt-2">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nkay-gold"></i> Classic Hydra-Glow Facial (45 Mins)</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nkay-gold"></i> Russian Gelish Manicure</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nkay-gold"></i> Blowdry & Hair Styling</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nkay-gold"></i> Complimentary Moroccan Tea</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-nkay-border">
+                        <a href="#booking" class="block text-center w-full py-3 rounded-md btn-wine font-bold text-xs uppercase tracking-wider">
+                            Book This Package
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Package 2 VIP Bridal -->
+                <div class="nkay-card rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden bg-nkay-wine text-white border-2 border-nkay-gold shadow-md">
+                    <div class="absolute top-3 right-3 bg-nkay-gold text-white text-[9px] font-bold uppercase px-2.5 py-1 rounded">VIP Royal</div>
+                    <div class="space-y-4">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-nkay-gold bg-white/10 px-3 py-1 rounded">Bridal & Glamour</span>
+                        <h3 class="font-serif-heading text-2xl text-white">Al Ain Bridal Suite</h3>
+                        <div class="text-3xl font-cinzel-heading font-bold text-nkay-gold">
+                            AED 1,200 <span class="text-xs text-nkay-roseLight font-normal">/ full ritual</span>
+                        </div>
+                        <ul class="space-y-2.5 text-xs text-nkay-roseLight pt-2">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nkay-gold"></i> Deep Caviar Hair Treatment & Styling</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nkay-gold"></i> Luxury Spa Mani-Pedi with Gelish</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nkay-gold"></i> Oxygenate Glow Hydra-Facial</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nkay-gold"></i> Lash Lift & Brow Lamination</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nkay-gold"></i> Full Private VIP Suite Booking</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-white/20">
+                        <a href="#booking" class="block text-center w-full py-3 rounded-md btn-gold font-bold text-xs uppercase tracking-wider">
+                            Reserve VIP Suite
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Package 3 -->
+                <div class="nkay-card rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden border-2 border-nkay-border">
+                    <div class="space-y-4">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-nkay-wine bg-nkay-roseLight px-3 py-1 rounded">Hair Care Ritual</span>
+                        <h3 class="font-serif-heading text-2xl text-nkay-wine">Silk Hair & Scalp Therapy</h3>
+                        <div class="text-3xl font-cinzel-heading font-bold text-nkay-wine">
+                            AED 450 <span class="text-xs text-nkay-muted font-normal">/ combo</span>
+                        </div>
+                        <ul class="space-y-2.5 text-xs text-nkay-slate pt-2">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nkay-gold"></i> Organic Protein Treatment</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nkay-gold"></i> Scalp Detox Massage</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nkay-gold"></i> Trim & Professional Hair Styling</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-nkay-gold"></i> Home Care Hair Oil Sample</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-nkay-border">
+                        <a href="#booking" class="block text-center w-full py-3 rounded-md btn-wine font-bold text-xs uppercase tracking-wider">
+                            Book This Package
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 5: CLIENT REVIEWS -->
+    <section id="reviews" class="py-16 bg-nkay-cream border-b border-nkay-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+                <span class="text-nkay-gold text-xs font-bold uppercase tracking-widest bg-white px-3.5 py-1.5 rounded border border-nkay-gold/30 inline-block">
+                    Verified Reviews
+                </span>
+                <h2 class="font-serif-heading text-3xl sm:text-4xl font-normal text-nkay-wine">Loved by Al Ain Ladies</h2>
+                <p class="text-nkay-muted text-xs sm:text-sm font-normal">Read what our clients say about our staff, atmosphere, and service quality.</p>
+            </div>
+
+            <!-- Reviews Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="p-6 rounded-xl bg-white border border-nkay-border space-y-4">
+                    <div class="flex text-nkay-gold text-xs gap-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-xs text-nkay-slate leading-relaxed italic">
+                        "The best salon experience in Al Ain! Very clean, cozy, and private. I did my protein hair treatment and gelish nails here—the staff is so polite and skilled."
+                    </p>
+                    <div class="pt-3 border-t border-nkay-border flex items-center justify-between text-xs">
+                        <strong class="text-nkay-wine">Mariam Al-Dhaheri</strong>
+                        <span class="text-nkay-muted text-[11px]">Al Jimi, Al Ain</span>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-xl bg-white border border-nkay-border space-y-4">
+                    <div class="flex text-nkay-gold text-xs gap-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-xs text-nkay-slate leading-relaxed italic">
+                        "I love their hydra-facial! My skin felt so soft and glowing for days after. The salon is super quiet and relaxed compared to overcrowded places."
+                    </p>
+                    <div class="pt-3 border-t border-nkay-border flex items-center justify-between text-xs">
+                        <strong class="text-nkay-wine">Shaikha Al-Neyadi</strong>
+                        <span class="text-nkay-muted text-[11px]">Al Foah, Al Ain</span>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-xl bg-white border border-nkay-border space-y-4">
+                    <div class="flex text-nkay-gold text-xs gap-1">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-xs text-nkay-slate leading-relaxed italic">
+                        "N Kay is my go-to salon before every event. Their lash lift and pedicure service is top-notch. Highly recommend to anyone looking for clean, professional beauty care in Al Ain."
+                    </p>
+                    <div class="pt-3 border-t border-nkay-border flex items-center justify-between text-xs">
+                        <strong class="text-nkay-wine">Fatima Al-Shamsi</strong>
+                        <span class="text-nkay-muted text-[11px]">Central District, Al Ain</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 6: CONTACT & APPOINTMENT BOOKING -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                
+                <!-- Contact & Location Info -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div>
+                        <span class="text-nkay-gold text-xs font-bold uppercase tracking-widest bg-nkay-cream px-3.5 py-1.5 rounded border border-nkay-gold/30 inline-block">
+                            Salon Location
+                        </span>
+                        <h2 class="font-serif-heading text-3xl font-normal text-nkay-wine mt-2">Visit N Kay Beauty</h2>
+                        <p class="text-xs text-nkay-muted mt-1">Conveniently situated in Al Jimi Area, Al Ain, UAE.</p>
+                    </div>
+
+                    <div class="space-y-4 text-xs">
+                        <div class="flex items-start gap-3">
+                            <div class="w-9 h-9 rounded bg-nkay-roseLight text-nkay-wine flex items-center justify-center shrink-0 border border-nkay-rose/40 mt-0.5">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <strong class="text-nkay-wine block text-xs">Address</strong>
+                                <span class="text-nkay-muted">Al Jimi / Near Central District, Al Ain, Abu Dhabi Emirate, United Arab Emirates</span>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-9 h-9 rounded bg-nkay-roseLight text-nkay-wine flex items-center justify-center shrink-0 border border-nkay-rose/40 mt-0.5">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <strong class="text-nkay-wine block text-xs">Phone & WhatsApp Desk</strong>
+                                <a href="tel:+97137660000" class="text-nkay-wine font-bold hover:underline block">+971 3 766 0000</a>
+                                <a href="https://wa.me/971500000000" target="_blank" class="text-emerald-700 font-bold hover:underline block mt-0.5"><i class="fa-brands fa-whatsapp mr-1"></i>WhatsApp Salon Desk</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-3">
+                            <div class="w-9 h-9 rounded bg-nkay-roseLight text-nkay-wine flex items-center justify-center shrink-0 border border-nkay-rose/40 mt-0.5">
+                                <i class="fa-solid fa-clock"></i>
+                            </div>
+                            <div>
+                                <strong class="text-nkay-wine block text-xs">Opening Hours</strong>
+                                <span class="text-nkay-muted block">Monday – Sunday: 10:00 AM – 10:00 PM</span>
+                                <span class="text-nkay-muted block">Fridays: 1:00 PM – 10:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-2">
+                        <a href="https://maps.google.com/?q=Al+Jimi+Al+Ain+UAE" target="_blank" class="inline-flex items-center gap-2 border border-nkay-wine text-nkay-wine px-5 py-3 rounded font-bold text-xs uppercase tracking-wider hover:bg-nkay-wine hover:text-white transition-all">
+                            <i class="fa-solid fa-map-location-dot text-nkay-gold"></i>
+                            <span>Open Google Maps Location</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Appointment Booking Form -->
+                <div class="lg:col-span-7" id="booking">
+                    <form class="bg-nkay-cream p-6 sm:p-8 rounded-2xl border border-nkay-border space-y-4 shadow-sm" onsubmit="event.preventDefault(); handleBookingSubmit();">
+                        <div class="border-b border-nkay-border pb-3">
+                            <h3 class="font-serif-heading text-xl font-normal text-nkay-wine">Book Your Salon Appointment</h3>
+                            <p class="text-xs text-nkay-muted mt-0.5">Choose your desired treatment and date below.</p>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-[11px] font-bold text-nkay-wine uppercase mb-1">Your Name</label>
+                                <input type="text" id="form-name" required placeholder="e.g. Mariam Al-Dhaheri" class="w-full px-3.5 py-2.5 rounded bg-white border border-nkay-border text-xs text-nkay-slate focus:outline-none focus:border-nkay-gold">
+                            </div>
+                            <div>
+                                <label class="block text-[11px] font-bold text-nkay-wine uppercase mb-1">Mobile / WhatsApp</label>
+                                <input type="tel" id="form-phone" required placeholder="+971 50 xxx xxxx" class="w-full px-3.5 py-2.5 rounded bg-white border border-nkay-border text-xs text-nkay-slate focus:outline-none focus:border-nkay-gold">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-[11px] font-bold text-nkay-wine uppercase mb-1">Service Category</label>
+                                <select id="form-service" class="w-full px-3.5 py-2.5 rounded bg-white border border-nkay-border text-xs text-nkay-slate focus:outline-none focus:border-nkay-gold">
+                                    <option value="Organic Keratin & Caviar Hair Treatment">Organic Keratin & Caviar Hair Treatment</option>
+                                    <option value="Russian Gelish Mani-Pedi">Russian Gelish Mani-Pedi</option>
+                                    <option value="Signature Hydra-Facial">Signature Hydra-Facial</option>
+                                    <option value="Lash Lift & Brow Lamination">Lash Lift & Brow Lamination</option>
+                                    <option value="Weekend Pamper Glow Package">Weekend Pamper Glow Package</option>
+                                    <option value="VIP Bridal Suite Package">VIP Bridal Suite Package</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-[11px] font-bold text-nkay-wine uppercase mb-1">Preferred Date & Time</label>
+                                <input type="text" id="form-date" placeholder="e.g. Tomorrow at 5:00 PM" class="w-full px-3.5 py-2.5 rounded bg-white border border-nkay-border text-xs text-nkay-slate focus:outline-none focus:border-nkay-gold">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-[11px] font-bold text-nkay-wine uppercase mb-1">Special Requests / Notes</label>
+                            <textarea id="form-notes" rows="3" placeholder="Let us know if you prefer a private room or have special requests..." class="w-full px-3.5 py-2.5 rounded bg-white border border-nkay-border text-xs text-nkay-slate focus:outline-none focus:border-nkay-gold"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 rounded btn-wine font-bold text-xs uppercase tracking-wider shadow-xs">
+                            Confirm Booking Request
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 bg-nkay-wineDark text-nkay-roseLight text-xs border-t border-nkay-gold/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <span class="font-cinzel-heading text-nkay-gold font-bold">NK</span>
+                <span>© 2026 N Kay Beauty Salon LLC (سالون ان كاي للتجميل) • Al Ain, Abu Dhabi, UAE.</span>
+            </div>
+            <div class="flex gap-4 text-nkay-gold font-semibold">
+                <a href="tel:+97137660000" class="hover:underline"><i class="fa-solid fa-phone mr-1"></i>+971 3 766 0000</a>
+                <a href="#contact" class="hover:underline"><i class="fa-solid fa-location-dot mr-1"></i>Al Jimi, Al Ain</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE MODAL MESSAGE -->
+    <div id="status-modal" class="fixed inset-0 z-50 bg-nkay-wineDark/80 backdrop-blur-xs hidden flex items-center justify-center p-4">
+        <div class="bg-white p-6 rounded-2xl max-w-md w-full text-center space-y-4 shadow-2xl border border-nkay-gold/40">
+            <div class="w-12 h-12 rounded-full bg-rose-100 text-nkay-wine flex items-center justify-center mx-auto text-2xl border border-rose-200">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <h3 class="font-serif-heading text-xl font-normal text-nkay-wine" id="modal-title">Appointment Request Received</h3>
+            <p class="text-xs text-nkay-muted leading-relaxed" id="modal-msg">Thank you for choosing N Kay Beauty Salon Al Ain.</p>
+            <button onclick="closeModal()" class="w-full py-2.5 rounded btn-wine font-bold text-xs uppercase tracking-wider">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Mobile Navigation Toggle
+        document.getElementById('mobile-menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Category Filter Functionality
+        function filterCategory(category) {
+            const items = document.querySelectorAll('.cat-item');
+            const btns = document.querySelectorAll('.cat-btn');
+
+            btns.forEach(btn => {
+                btn.classList.remove('bg-nkay-wine', 'text-white');
+                btn.classList.add('bg-white', 'text-nkay-wine', 'border', 'border-nkay-border');
+            });
+
+            const activeBtn = document.getElementById('tab-' + category);
+            if(activeBtn) {
+                activeBtn.classList.remove('bg-white', 'border', 'border-nkay-border');
+                activeBtn.classList.add('bg-nkay-wine', 'text-white');
+            }
+
+            items.forEach(item => {
+                if(category === 'all' || item.getAttribute('data-cat') === category) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        }
+
+        // Form Submission Logic
+        function handleBookingSubmit() {
+            const name = document.getElementById('form-name').value;
+            const phone = document.getElementById('form-phone').value;
+            const service = document.getElementById('form-service').value;
+
+            document.getElementById('modal-title').innerText = "Booking Request Sent";
+            document.getElementById('modal-msg').innerText = "Thank you " + name + ". Your booking request for '" + service + "' at N Kay Beauty Salon (Al Ain) has been recorded. Our reception desk will message/call you at " + phone + " to confirm your time slot.";
+
+            document.getElementById('status-modal').classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('status-modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
